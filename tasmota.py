@@ -218,20 +218,20 @@ def getSensorDevices(message):
     states = []
 
     typeDb = {
-        'Temperature':   {'Name': 'Temperatur',      'Unit': '°C',   'DomoType': 'Temperature'},
-        'Humidity':      {'Name': 'Feuchtigkeit',    'Unit': '%',    'DomoType': 'Humidity'},
-        'Pressure':      {'Name': 'Luftdruck',       'Unit': 'hPa',  'DomoType': 'Barometer'},
-        'Illuminance':   {'Name': 'Helligkeit',      'Unit': 'lux',  'DomoType': 'Illumination'},
-        'Distance':      {'Name': 'Abstand',         'Unit': 'mm ',  'DomoType': 'Distance'},
-        'Total':         {'Name': 'Gesamt',          'Unit': 'kWh',  'DomoType': 'Custom'},
-        'Yesterday':     {'Name': 'Gestern',         'Unit': 'kWh',  'DomoType': 'Custom'},
-        'Today':         {'Name': 'Heute',           'Unit': 'kWh',  'DomoType': 'Custom'},
-        'Power':         {'Name': 'Leistung',        'Unit': 'kW',   'DomoType': 'Usage'},
-        'ApparentPower': {'Name': 'Scheinleistung',  'Unit': 'kW',   'DomoType': 'Usage'},
-        'ReactivePower': {'Name': 'Blindleistung',   'Unit': 'kW',   'DomoType': 'Usage'},
-        'Factor':        {'Name': 'Leistungsfaktor', 'Unit': 'W/VA', 'DomoType': 'Custom'},
-        'Voltage':       {'Name': 'Spannung',        'Unit': 'V',    'DomoType': 'Voltage'},
-        'Current':       {'Name': 'Strom',           'Unit': 'A',    'DomoType': 'Current (Single)'}
+        'Temperature':   {'Name': 'Temperature',      'Unit': '°C',   'DomoType': 'Temperature'},
+        'Humidity':      {'Name': 'Humidity',    'Unit': '%',    'DomoType': 'Humidity'},
+        'Pressure':      {'Name': 'Pressure',       'Unit': 'hPa',  'DomoType': 'Barometer'},
+        'Illuminance':   {'Name': 'Illumination',      'Unit': 'lux',  'DomoType': 'Illumination'},
+        'Distance':      {'Name': 'Distance',         'Unit': 'mm ',  'DomoType': 'Distance'},
+        'Total':         {'Name': 'Total',          'Unit': 'kWh',  'DomoType': 'Custom'},
+        'Yesterday':     {'Name': 'Energy yesterday',         'Unit': 'kWh',  'DomoType': 'Usage'},
+        'Today':         {'Name': 'Energy today',           'Unit': 'kWh',  'DomoType': 'Usage'},
+        'Power':         {'Name': 'Power',        'Unit': 'kW',   'DomoType': 'Usage'},
+        'ApparentPower': {'Name': 'Apparent Power',  'Unit': 'kW',   'DomoType': 'Usage'},
+        'ReactivePower': {'Name': 'Reactive Power',   'Unit': 'kW',   'DomoType': 'Usage'},
+        'Factor':        {'Name': 'Power Factor', 'Unit': 'W/VA', 'DomoType': 'Custom'},
+        'Voltage':       {'Name': 'Voltage',        'Unit': 'V',    'DomoType': 'Voltage'},
+        'Current':       {'Name': 'Current',           'Unit': 'A',    'DomoType': 'Current (Single)'}
     }
 
     if isinstance(message, collections.Mapping):
