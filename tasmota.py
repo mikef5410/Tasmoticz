@@ -224,8 +224,8 @@ def getSensorDevices(message):
         'Illuminance':   {'Name': 'Illumination',      'Unit': 'lux',  'DomoType': 'Illumination'},
         'Distance':      {'Name': 'Distance',         'Unit': 'mm ',  'DomoType': 'Distance'},
         'Total':         {'Name': 'Total',          'Unit': 'kWh',  'DomoType': 'Custom'},
-        'Yesterday':     {'Name': 'Energy yesterday',         'Unit': 'kWh',  'DomoType': 'Usage'},
-        'Today':         {'Name': 'Energy today',           'Unit': 'kWh',  'DomoType': 'Usage'},
+        'Yesterday':     {'Name': 'Energy yesterday',         'Unit': 'kWh',  'DomoType': 'Custom'},
+        'Today':         {'Name': 'Energy today',           'Unit': 'kWh',  'DomoType': 'Custom'},
         'Power':         {'Name': 'Power',        'Unit': 'kW',   'DomoType': 'Usage'},
         'ApparentPower': {'Name': 'Apparent Power',  'Unit': 'kW',   'DomoType': 'Usage'},
         'ReactivePower': {'Name': 'Reactive Power',   'Unit': 'kW',   'DomoType': 'Usage'},
@@ -242,7 +242,7 @@ def getSensorDevices(message):
                         desc = typeDb[type].copy()
                         desc['Sensor'] = sensor
                         if sensor == 'ENERGY':
-                            desc['Sensor'] = 'Energie'
+                            desc['Sensor'] = 'Energy'
                         states.append((sensor, type, value, desc))
 
     return states
